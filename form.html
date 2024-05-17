@@ -6,6 +6,8 @@
   <title>Borrower First</title>  
   
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
   
   <link rel="icon" href="./images/icon.png" type="image/x-icon" sizes="20x20"/>
   <style>
@@ -28,7 +30,7 @@
   <div class="formcontact">
     <div id="firstPage" class="bg-cover h-screen w-screen gap-4 flex flex-col lg:flex-row justify-center items-center">
       <div class="lg:mx-16 my-12 lg:my-0">
-        <iframe title="vimeo-player" src="https://player.vimeo.com/video/925286789?h=24dd8b7dd3" width="640" height="360" class="w-[90vw] h-[360px] sm:w-[640px]"></iframe>
+        <iframe id="vimeoPlayer" title="vimeo-player" src="https://player.vimeo.com/video/925286789?h=24dd8b7dd3" width="640" height="360" class="w-[90vw] h-[360px] sm:w-[640px]" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="flex flex-col justify-center items-start w-[90vw] md:w-auto">
         <h1>Did you know that you could potentially save $100,000 on your home loan?</h1>
@@ -37,7 +39,7 @@
     </div>
     <div id="submitPage" class="bg-cover h-screen w-screen gap-4 flex flex-col lg:flex-row justify-center items-center hidden">
       <div class="lg:mx-16 my-12 lg:my-0">
-        <iframe title="vimeo-player" src="https://player.vimeo.com/video/925286789?h=24dd8b7dd3" width="640" height="360" class="w-[90vw] h-[360px] sm:w-[640px]"></iframe>
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/925286789?h=24dd8b7dd3" width="640" height="360" class="w-[90vw] h-[360px] sm:w-[640px]"  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="flex flex-col justify-center text-[18px] items-start w-[90vw] mx-auto">
         <h1 class="mx-auto">Hold your horses! Please watch this video before exiting.</h1>
@@ -69,6 +71,20 @@
     </div>
     
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var iframe = document.getElementById('vimeoPlayer');
+      var player = new Vimeo.Player(iframe);
+
+      player.ready().then(function() {
+        player.setVolume(0).then(function() {
+          return player.play();
+        }).catch(function(error) {
+          console.error('Error playing the video:', error);
+        });
+      });
+    });
+  </script>
   <script>
     const questions = [
       {
