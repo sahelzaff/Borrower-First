@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borrower First</title>  
+  <title>Refin Save</title>  
   
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <link rel="icon" href="images\icon.png" type="image/x-icon" sizes="20x20" />
+  <link rel="icon" href="./images/icon.png" type="image/x-icon" sizes="20x20"/>
   <style>
     .inputFieldContainer {
      margin-bottom: 10px; 
@@ -23,23 +23,16 @@
     }
   </style>
 </head>
-<body class="text-black bg-white bg-cover h-screen w-screen flex flex-col justify-center items-center">
-  <div class="pt-8 lg:pt-0 lg:-mt-4">
-    <header class=" mt-2  w-screen pt-2 flex justify-center bg-white" style="border-bottom:0.15rem solid #2162a4 ;
-         ">
-            <div class="pt-2 mr-4 cursor-pointer"><a href="https://borrowerfirst.com.au/" target="_blank"
-                    rel="noopener noreferrer"><img alt="Refine Save" loading="lazy" width="240" height="50"
-                        decoding="async" data-nimg="1" style="color:transparent"
-                        src="./images/borrowfirst-logo.webp" /></a></div>
-        </header>
-  </div>
+<body class="text-white bg-black bg-cover h-screen w-screen flex flex-col justify-center items-center">
+  <div class="formheader"></div>
+  <div class="formcontact">
     <div id="firstPage" class="bg-cover h-screen w-screen gap-4 flex flex-col lg:flex-row justify-center items-center">
       <div class="lg:mx-16 my-12 lg:my-0">
         <iframe title="vimeo-player" src="https://player.vimeo.com/video/925286789?h=24dd8b7dd3" width="640" height="360" class="w-[90vw] h-[360px] sm:w-[640px]"></iframe>
       </div>
       <div class="flex flex-col justify-center items-start w-[90vw] md:w-auto">
-        <h1 class="font-bold">Did you know that you could potentially <span class="text-blue-700">save $100,000</span> on your home loan?</h1>
-        <button class="text-gray-500 my-5 font-bold bg-white rounded-sm flex justify-center items-center p-3 hover:bg-blue-700 hover:text-white" id="startButton">Start Saving</button>
+        <h1>Did you know that you could potentially save $100,000 on your home loan?</h1>
+        <button class="text-gray-500 my-5 font-bold bg-white rounded-sm flex justify-center items-center p-3 hover:bg-gray-700 hover:text-white" id="startButton">Start Saving</button>
       </div>
     </div>
     <div id="submitPage" class="bg-cover h-screen w-screen gap-4 flex flex-col lg:flex-row justify-center items-center hidden">
@@ -47,7 +40,7 @@
         <iframe title="vimeo-player" src="https://player.vimeo.com/video/925286789?h=24dd8b7dd3" width="640" height="360" class="w-[90vw] h-[360px] sm:w-[640px]"></iframe>
       </div>
       <div class="flex flex-col justify-center text-[18px] items-start w-[90vw] mx-auto">
-        <h1 class="font-bold mx-auto">Hold your horses! Please watch this video before exiting.</h1>
+        <h1 class="mx-auto">Hold your horses! Please watch this video before exiting.</h1>
       </div>
     </div>
 
@@ -59,15 +52,15 @@
                     <label class="my-2 font-extrabold" id="questionLabel"></label>
                     <label id="questionText" class="my-2"></label>
                     <div id="optionsContainer"></div>
-                    <input type="text" id="inputField" class="border border-blue-600 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
-                    <input type="text" id="inputField1" class="border border-blue-600 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
-                    <input type="text" id="inputField2" class="border border-blue-600 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
-                    <input type="number" id="inputField3" class="border border-blue-600 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
-                    <input type="email" id="inputField4" class="border border-blue-600 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
+                    <input type="text" id="inputField" class="border border-gray-300 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
+                    <input type="text" id="inputField1" class="border border-gray-300 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
+                    <input type="text" id="inputField2" class="border border-gray-300 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
+                    <input type="number" id="inputField3" class="border border-gray-300 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
+                    <input type="email" id="inputField4" class="border border-gray-300 rounded-md p-2 mb-8 text-black form-container transition-transform duration-700 translate-y-full hidden" />
                     <div class="mt-4 flex justify-center">
-                        <button type="button" id="prevButton" class="bg-white text-gray-500 px-4 py-2 rounded-md mr-2 hover:bg-blue-700 hover:text-white hidden">Previous</button>
-                        <button type="button" id="nextButton" class="bg-white text-gray-500 px-4 py-2 rounded-md hover:bg-blue-700 hover:text-white">Next</button>
-                        <button type="submit" id="submitButton" class="bg-white text-gray-500 px-4 py-2 rounded-md hover:bg-blue-700 hover:text-white hidden">Submit</button>
+                        <button type="button" id="prevButton" class="bg-white text-gray-500 px-4 py-2 rounded-md mr-2 hover:bg-gray-700 hover:text-white hidden">Previous</button>
+                        <button type="button" id="nextButton" class="bg-white text-gray-500 px-4 py-2 rounded-md hover:bg-gray-700 hover:text-white">Next</button>
+                        <button type="submit" id="submitButton" class="bg-white text-gray-500 px-4 py-2 rounded-md hover:bg-gray-700 hover:text-white hidden">Submit</button>
                     </div>
                 </div>
             </fieldset>
@@ -216,9 +209,9 @@ function renderQuestion() {
         "cursor-pointer"
 );
       if (selectedOption === option.value) {
-        optionDiv.classList.add("bg-blue-700", "text-white");
+        optionDiv.classList.add("bg-gray-700", "text-white");
       } else {
-        optionDiv.classList.add("hover:bg-blue-700", "hover:text-white", "hover:scale-105");
+        optionDiv.classList.add("hover:bg-gray-700", "hover:text-white", "hover:scale-105");
       }
       optionDiv.addEventListener("click", () => handleDivClick(option.value));
 
