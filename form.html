@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borrower First</title>  
+  <title>Refin Save</title>  
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -72,7 +72,7 @@
   <script>
     const questions = [
       {
-        id: "entry.746429476",
+        id: "entry.1304601295",
         label: "Are you looking to save money on your home loan?",
         options: [
           { value: "Yes", label: "Yes" },
@@ -80,7 +80,7 @@
         ],
       },
       {
-        id: "entry.1436654493",
+        id: "entry.799775844",
         label: "Are you considering refinancing your home loan?",
         options: [
           { value: "Yes", label: "Yes" },
@@ -88,7 +88,7 @@
         ],
       },
       {
-        id: "entry.1449253335",
+        id: "entry.1190176406",
         label: "What are you looking for in a mortgage broker?",
         options: [
           { value: "Amazing Customer Service", label: "Amazing Customer Service" },
@@ -97,7 +97,7 @@
         ],
       },
       {
-        id: "entry.1976628033",
+        id: "entry.601504907",
         label: "How much is your current home loan?",
         options: [
           { value: "Less than $500,000", label: "Less than $500,000" },
@@ -106,22 +106,22 @@
         ],
       },
       {
-        id: "entry.766709407",
+        id: "entry.1852091999",
         label: "First Name",
         inputType: "text",
       },
       {
-        id: "entry.463689415",
+        id: "entry.1864562702",
         label: "Last Name",
         inputType: "text",
       },
       {
-        id: "entry.2034379913",
+        id: "entry.712112702",
         label: "Phone Number with Country Code",
         inputType: "number",
       },
       {
-        id: "entry.1906650329",
+        id: "entry.1240358646",
         label: "Email",
         inputType: "email",
       },
@@ -129,14 +129,14 @@
 
 let currentQuestion = 0;
 let formData = {
-  "entry.746429476": "",
-  "entry.1436654493": "",
-  "entry.1449253335": "",
-  "entry.1976628033": "",
-  "entry.766709407": "",
-  "entry.463689415": "",
-  "entry.2034379913": "",
-  "entry.1906650329": "",
+  "entry.1304601295": "",
+  "entry.799775844": "",
+  "entry.1190176406": "",
+  "entry.601504907": "",
+  "entry.1852091999": "",
+  "entry.1864562702": "",
+  "entry.712112702": "",
+  "entry.1240358646": "",
 };
 let selectedOption = "";
 let isFirstPage = true;
@@ -235,22 +235,22 @@ function renderQuestion() {
       optionsContainer.appendChild(optionDiv);
     });
   } else { 
-    if (currentQuestionData.id == "entry.766709407"){
+    if (currentQuestionData.id == "entry.1852091999"){
       inputField1.value = formData[currentQuestionData.id];
       inputField1.addEventListener("input", () => handleInputData(currentQuestionData.id, inputField1.value));
       inputField1.classList.remove("hidden");
     }
-    else if (currentQuestionData.id ==  "entry.463689415"){
+    else if (currentQuestionData.id ==  "entry.1864562702"){
       inputField2.value = formData[currentQuestionData.id];
       inputField2.addEventListener("input", () => handleInputData(currentQuestionData.id, inputField2.value));
       inputField2.classList.remove("hidden");
     }
-    else if (currentQuestionData.id ==  "entry.2034379913"){
+    else if (currentQuestionData.id ==  "entry.712112702"){
       inputField3.value = formData[currentQuestionData.id];
       inputField3.addEventListener("input", () => handleInputData(currentQuestionData.id, inputField3.value));
       inputField3.classList.remove("hidden");
     }
-    else if (currentQuestionData.id ==  "entry.1906650329"){
+    else if (currentQuestionData.id ==  "entry.1240358646"){
       inputField4.value = formData[currentQuestionData.id];
       inputField4.addEventListener("input", () => handleInputData(currentQuestionData.id, inputField4.value));
       inputField4.classList.remove("hidden");
@@ -340,7 +340,7 @@ async function handleSubmit(e) {
 
   try {
     const res = await fetch(
-      "https://docs.google.com/forms/d/e/1FAIpQLSdyUrQ0MbplTcnoLU2RKzbbBU3yhDh_R6fwmBUGmotO0gDAoA/formResponse",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdYt32pGzBe_jnUYZoW2T7GXt1Pe86FR8Rk-SNGuqOH3QSrkg/viewform",
       {
         method: "POST",
         mode: "no-cors",
